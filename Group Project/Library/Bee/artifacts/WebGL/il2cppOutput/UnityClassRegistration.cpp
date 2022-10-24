@@ -36,6 +36,12 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_Subsystems();
 	RegisterModule_Subsystems();
 
+	void RegisterModule_Terrain();
+	RegisterModule_Terrain();
+
+	void RegisterModule_TerrainPhysics();
+	RegisterModule_TerrainPhysics();
+
 	void RegisterModule_TextRendering();
 	RegisterModule_TextRendering();
 
@@ -134,8 +140,12 @@ class Texture2DArray; template <> void RegisterUnityClass<Texture2DArray>(const 
 class Texture3D; template <> void RegisterUnityClass<Texture3D>(const char*);
 class TimeManager; template <> void RegisterUnityClass<TimeManager>(const char*);
 class Transform; template <> void RegisterUnityClass<Transform>(const char*);
+class Collider; template <> void RegisterUnityClass<Collider>(const char*);
 class PhysicsManager; template <> void RegisterUnityClass<PhysicsManager>(const char*);
 class Physics2DSettings; template <> void RegisterUnityClass<Physics2DSettings>(const char*);
+class Terrain; template <> void RegisterUnityClass<Terrain>(const char*);
+class TerrainData; template <> void RegisterUnityClass<TerrainData>(const char*);
+class TerrainCollider; template <> void RegisterUnityClass<TerrainCollider>(const char*);
 namespace TextRendering { class Font; } template <> void RegisterUnityClass<TextRendering::Font>(const char*);
 namespace UI { class Canvas; } template <> void RegisterUnityClass<UI::Canvas>(const char*);
 namespace UI { class CanvasGroup; } template <> void RegisterUnityClass<UI::CanvasGroup>(const char*);
@@ -145,7 +155,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 67 non stripped classes
+	//Total: 71 non stripped classes
 	//0. Animator
 	RegisterUnityClass<Animator>("Animation");
 	//1. AnimatorController
@@ -268,17 +278,25 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<TimeManager>("Core");
 	//60. Transform
 	RegisterUnityClass<Transform>("Core");
-	//61. PhysicsManager
+	//61. Collider
+	RegisterUnityClass<Collider>("Physics");
+	//62. PhysicsManager
 	RegisterUnityClass<PhysicsManager>("Physics");
-	//62. Physics2DSettings
+	//63. Physics2DSettings
 	RegisterUnityClass<Physics2DSettings>("Physics2D");
-	//63. Font
+	//64. Terrain
+	RegisterUnityClass<Terrain>("Terrain");
+	//65. TerrainData
+	RegisterUnityClass<TerrainData>("Terrain");
+	//66. TerrainCollider
+	RegisterUnityClass<TerrainCollider>("TerrainPhysics");
+	//67. Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
-	//64. Canvas
+	//68. Canvas
 	RegisterUnityClass<UI::Canvas>("UI");
-	//65. CanvasGroup
+	//69. CanvasGroup
 	RegisterUnityClass<UI::CanvasGroup>("UI");
-	//66. CanvasRenderer
+	//70. CanvasRenderer
 	RegisterUnityClass<UI::CanvasRenderer>("UI");
 
 }

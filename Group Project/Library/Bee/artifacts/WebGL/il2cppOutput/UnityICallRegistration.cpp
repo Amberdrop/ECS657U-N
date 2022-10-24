@@ -2252,6 +2252,54 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.SystemInfo
 
+	//Start Registrations for type : UnityEngine.Terrain
+
+		//System.Boolean UnityEngine.Terrain::get_allowAutoConnect()
+		void Register_UnityEngine_Terrain_get_allowAutoConnect();
+		Register_UnityEngine_Terrain_get_allowAutoConnect();
+
+		//System.Int32 UnityEngine.Terrain::get_groupingID()
+		void Register_UnityEngine_Terrain_get_groupingID();
+		Register_UnityEngine_Terrain_get_groupingID();
+
+		//System.Void UnityEngine.Terrain::SetNeighbors(UnityEngine.Terrain,UnityEngine.Terrain,UnityEngine.Terrain,UnityEngine.Terrain)
+		void Register_UnityEngine_Terrain_SetNeighbors();
+		Register_UnityEngine_Terrain_SetNeighbors();
+
+		//UnityEngine.TerrainData UnityEngine.Terrain::get_terrainData()
+		void Register_UnityEngine_Terrain_get_terrainData();
+		Register_UnityEngine_Terrain_get_terrainData();
+
+		//UnityEngine.Terrain[] UnityEngine.Terrain::get_activeTerrains()
+		void Register_UnityEngine_Terrain_get_activeTerrains();
+		Register_UnityEngine_Terrain_get_activeTerrains();
+
+	//End Registrations for type : UnityEngine.Terrain
+
+	//Start Registrations for type : UnityEngine.TerrainData
+
+		//System.Int32 UnityEngine.TerrainData::GetBoundaryValue(UnityEngine.TerrainData/BoundaryValueType)
+		void Register_UnityEngine_TerrainData_GetBoundaryValue();
+		Register_UnityEngine_TerrainData_GetBoundaryValue();
+
+		//System.Single UnityEngine.TerrainData::GetAlphamapResolutionInternal()
+		void Register_UnityEngine_TerrainData_GetAlphamapResolutionInternal();
+		Register_UnityEngine_TerrainData_GetAlphamapResolutionInternal();
+
+		//System.Void UnityEngine.TerrainData::Internal_Create(UnityEngine.TerrainData)
+		void Register_UnityEngine_TerrainData_Internal_Create();
+		Register_UnityEngine_TerrainData_Internal_Create();
+
+		//System.Void UnityEngine.TerrainData::get_size_Injected(UnityEngine.Vector3&)
+		void Register_UnityEngine_TerrainData_get_size_Injected();
+		Register_UnityEngine_TerrainData_get_size_Injected();
+
+		//UnityEngine.Terrain[] UnityEngine.TerrainData::get_users()
+		void Register_UnityEngine_TerrainData_get_users();
+		Register_UnityEngine_TerrainData_get_users();
+
+	//End Registrations for type : UnityEngine.TerrainData
+
 	//Start Registrations for type : UnityEngine.TextAsset
 
 		//System.Byte[] UnityEngine.TextAsset::get_bytes()
