@@ -9,11 +9,14 @@ public class PlayerController : MonoBehaviour {
 
 public Vector2 moveValue ;
 public float speed ;
-private int count;
-public TextMeshProUGUI scoreText;
+private int GemCount;
+private int ScrewCount;
+public TextMeshProUGUI GemText;
+public TextMeshProUGUI ScrewText;
 
 void Start () {
-count = 0;
+GemCount = 0;
+ScrewCount=0;
 SetCountText();
 }
 
@@ -32,13 +35,19 @@ fixedDeltaTime ) ;
 void OnTriggerEnter ( Collider other ) {
  if( other . gameObject . tag == "Gems" ) {
  other . gameObject . SetActive ( false ) ;
- count += 1;
+ GemCount += 1;
  SetCountText();
+ }
+ if (other.gameObject.tag == "Screw"){
+    other.gameObject.SetActive( false);
+    ScrewCount += 1;
+    SetCountText();
  }
 }
 
 private void SetCountText(){
-    scoreText.text = "Score: " + count.ToString();
+    GemText.text = "Gem: " + GemCount.ToString();
+    ScrewText.text = "Screw: " + ScrewCount.ToString();
 }
 
 }
