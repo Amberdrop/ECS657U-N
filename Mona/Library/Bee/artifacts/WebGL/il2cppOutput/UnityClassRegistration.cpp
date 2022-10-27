@@ -149,6 +149,7 @@ class SphereCollider; template <> void RegisterUnityClass<SphereCollider>(const 
 class Physics2DSettings; template <> void RegisterUnityClass<Physics2DSettings>(const char*);
 class Terrain; template <> void RegisterUnityClass<Terrain>(const char*);
 class TerrainData; template <> void RegisterUnityClass<TerrainData>(const char*);
+class TerrainLayer; template <> void RegisterUnityClass<TerrainLayer>(const char*);
 class TerrainCollider; template <> void RegisterUnityClass<TerrainCollider>(const char*);
 namespace TextRendering { class Font; } template <> void RegisterUnityClass<TextRendering::Font>(const char*);
 namespace TextRenderingPrivate { class TextMesh; } template <> void RegisterUnityClass<TextRenderingPrivate::TextMesh>(const char*);
@@ -160,7 +161,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 76 non stripped classes
+	//Total: 77 non stripped classes
 	//0. Animator
 	RegisterUnityClass<Animator>("Animation");
 	//1. AnimatorController
@@ -301,17 +302,19 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<Terrain>("Terrain");
 	//69. TerrainData
 	RegisterUnityClass<TerrainData>("Terrain");
-	//70. TerrainCollider
+	//70. TerrainLayer
+	RegisterUnityClass<TerrainLayer>("Terrain");
+	//71. TerrainCollider
 	RegisterUnityClass<TerrainCollider>("TerrainPhysics");
-	//71. Font
+	//72. Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
-	//72. TextMesh
+	//73. TextMesh
 	RegisterUnityClass<TextRenderingPrivate::TextMesh>("TextRendering");
-	//73. Canvas
+	//74. Canvas
 	RegisterUnityClass<UI::Canvas>("UI");
-	//74. CanvasGroup
+	//75. CanvasGroup
 	RegisterUnityClass<UI::CanvasGroup>("UI");
-	//75. CanvasRenderer
+	//76. CanvasRenderer
 	RegisterUnityClass<UI::CanvasRenderer>("UI");
 
 }
