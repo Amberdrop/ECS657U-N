@@ -1320,4 +1320,4 @@ ScriptsOnlyBuild:
   platform: 20
   scenePathNames:
   - Assets/Scenes/PlayerScene.unity
-  playerPath: C:/Users/Student/Documents/GitHub/ECS657U-N/terrain
+  playerPath: C:/Users/Student/Documents/GitHub/ECS657U-N/build
