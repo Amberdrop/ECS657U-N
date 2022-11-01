@@ -25,8 +25,10 @@ UnityEngine.Application::get_isBatchMode
 UnityEngine.Application::get_isFocused
 UnityEngine.Application::get_isPlaying
 UnityEngine.Application::get_runInBackground
+UnityEngine.Application::Quit
 UnityEngine.Application::set_targetFrameRate
 UnityEngine.Application::get_platform
+UnityEngine.AsyncOperation::InternalDestroy
 UnityEngine.Behaviour::get_enabled
 UnityEngine.Behaviour::get_isActiveAndEnabled
 UnityEngine.Behaviour::set_enabled
@@ -499,6 +501,9 @@ UnityEngine.ResourcesAPIInternal::Load
 UnityEngine.ResourcesAPIInternal::FindObjectsOfTypeAll
 UnityEngine.ResourcesAPIInternal::FindShaderByName
 UnityEngine.Rigidbody::AddForce_Injected
+UnityEngine.SceneManagement.SceneManager::get_sceneCount
+UnityEngine.SceneManagement.SceneManager::GetSceneAt_Injected
+UnityEngine.SceneManagement.SceneManagerAPIInternal::LoadSceneAsyncNameIndexInternal_Injected
 UnityEngine.Screen::get_fullScreen
 UnityEngine.Screen::get_height
 UnityEngine.Screen::get_width
