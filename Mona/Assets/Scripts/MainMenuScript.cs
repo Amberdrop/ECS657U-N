@@ -9,6 +9,10 @@ public class MainMenuScript : MonoBehaviour
          SceneManager.LoadScene ("Level1");
     }
 
+    public void IntroGame(){
+        SceneManager.LoadScene("Intro");
+    }
+
     public void QuitGame () {
 
         Debug.Log("QUIT!");
