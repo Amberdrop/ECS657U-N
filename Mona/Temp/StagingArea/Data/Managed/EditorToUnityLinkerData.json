@@ -52,6 +52,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "IntrotoGame",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "LevelGameManager",
             "fullManagedTypeName": "",
@@ -230,6 +237,7 @@
             "fullManagedTypeName": "UnityEditor.MonoScript",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Intro.unity",
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Menu.unity"
             ]
@@ -335,6 +343,7 @@
             "fullManagedTypeName": "UnityEngine.Canvas",
             "moduleName": "UI",
             "usedInScenes": [
+                "Assets/Scenes/Intro.unity",
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Menu.unity"
             ]
@@ -345,6 +354,7 @@
             "fullManagedTypeName": "UnityEngine.CanvasRenderer",
             "moduleName": "UI",
             "usedInScenes": [
+                "Assets/Scenes/Intro.unity",
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Menu.unity"
             ]
@@ -409,6 +419,7 @@
             "fullManagedTypeName": "UnityEngine.Font",
             "moduleName": "TextRendering",
             "usedInScenes": [
+                "Assets/Scenes/Intro.unity",
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Menu.unity"
             ]
@@ -525,6 +536,7 @@
             "fullManagedTypeName": "UnityEngine.MonoBehaviour",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Intro.unity",
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Menu.unity"
             ]
@@ -542,6 +554,15 @@
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
+            "nativeClass": "PlayableDirector",
+            "fullManagedTypeName": "UnityEngine.Playables.PlayableDirector",
+            "moduleName": "Director",
+            "usedInScenes": [
+                "Assets/Scenes/Intro.unity"
+            ]
+        },
+        {
+            "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "QualitySettings",
             "fullManagedTypeName": "UnityEngine.QualitySettings",
             "moduleName": "Core",
@@ -553,6 +574,7 @@
             "fullManagedTypeName": "UnityEngine.RectTransform",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Intro.unity",
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Menu.unity"
             ]
@@ -665,6 +687,7 @@
             "fullManagedTypeName": "UnityEngine.TextAsset",
             "moduleName": "Core",
             "usedInScenes": [
+                "Assets/Scenes/Intro.unity",
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Menu.unity"
             ]
@@ -690,6 +713,34 @@
                 "Assets/Scenes/Level1.unity",
                 "Assets/Scenes/Menu.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.ActivationPlayableAsset",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.ActivationTrack",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.MarkerTrack",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.TimelineAsset",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "UnityEngine.dll",

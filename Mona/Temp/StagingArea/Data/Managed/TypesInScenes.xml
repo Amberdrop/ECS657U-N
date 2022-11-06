@@ -1,6 +1,7 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="CameraController" preserve="nothing"/>
+		<type fullname="IntrotoGame" preserve="nothing"/>
 		<type fullname="LevelManager" preserve="nothing"/>
 		<type fullname="LevelOneStateManager" preserve="nothing"/>
 		<type fullname="MainMenuScript" preserve="nothing"/>
@@ -22,6 +23,12 @@
 		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
 		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
 		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.Timeline">
+		<type fullname="UnityEngine.Timeline.ActivationPlayableAsset" preserve="nothing"/>
+		<type fullname="UnityEngine.Timeline.ActivationTrack" preserve="nothing"/>
+		<type fullname="UnityEngine.Timeline.MarkerTrack" preserve="nothing"/>
+		<type fullname="UnityEngine.Timeline.TimelineAsset" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="UnityEngine">
 		<type fullname="UnityEditor.AudioManager" preserve="nothing"/>
@@ -55,6 +62,7 @@
 		<type fullname="UnityEngine.MeshRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.MonoBehaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.Object" preserve="nothing"/>
+		<type fullname="UnityEngine.Playables.PlayableDirector" preserve="nothing"/>
 		<type fullname="UnityEngine.QualitySettings" preserve="nothing"/>
 		<type fullname="UnityEngine.RectTransform" preserve="nothing"/>
 		<type fullname="UnityEngine.Renderer" preserve="nothing"/>
