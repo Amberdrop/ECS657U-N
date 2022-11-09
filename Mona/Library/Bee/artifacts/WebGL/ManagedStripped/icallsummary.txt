@@ -159,6 +159,7 @@ UnityEngine.CanvasRenderer::set_hasPopInstruction
 UnityEngine.CanvasRenderer::set_materialCount
 UnityEngine.CanvasRenderer::set_popMaterialCount
 UnityEngine.CanvasRenderer::GetMaterial
+UnityEngine.Collider::set_enabled
 UnityEngine.Collider::get_attachedRigidbody
 UnityEngine.Component::BroadcastMessage
 UnityEngine.Component::GetComponentsForListInternal

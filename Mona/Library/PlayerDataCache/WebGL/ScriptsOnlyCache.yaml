@@ -9,6 +9,7 @@ ScriptsOnlyBuild:
     - PlayerController
     - Respawn
     - UIManager
+    - WaterScript
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputSettings
@@ -24,11 +25,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
-    Unity.Timeline.Editor.dll:
-    - TimelinePreferences
-    - TimelineProjectSettings
-    - UnityEditor.Timeline.SequenceHierarchy
-    - UnityEditor.Timeline.TimelineWindow
     Unity.Timeline.dll:
     - UnityEngine.Timeline.ActivationPlayableAsset
     - UnityEngine.Timeline.ActivationTrack
@@ -165,7 +161,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6962}
     - Class: 114
-      Script: {instanceID: 25354}
+      Script: {instanceID: 7552}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -240,11 +236,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6920}
     - Class: 114
-      Script: {instanceID: 8396}
+      Script: {instanceID: 8398}
     - Class: 114
-      Script: {instanceID: 8714}
+      Script: {instanceID: 8716}
     - Class: 114
-      Script: {instanceID: 9000}
+      Script: {instanceID: 9002}
+    - Class: 114
+      Script: {instanceID: 30650}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -845,7 +843,7 @@ ScriptsOnlyBuild:
     className: TMP_Settings
   - hash:
       serializedVersion: 2
-      Hash: e507f19f8ed3e4ba340c93a5950a696b
+      Hash: 2d6eed2d16768e2127dda1635f2c6f23
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1289,6 +1287,12 @@ ScriptsOnlyBuild:
     className: VertexJitter
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IntrotoGame
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -1541,13 +1545,13 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: caa03d9ffa0c0a665cc403bf3e67d799
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: IntrotoGame
+    className: WaterScript
   platform: 20
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Intro.unity
   - Assets/Scenes/Level1.unity
-  playerPath: /Users/mona/Documents/GameDev/ECS657U-N/build
+  playerPath: C:/Users/Student/Documents/GitHub/ECS657U-N/build
