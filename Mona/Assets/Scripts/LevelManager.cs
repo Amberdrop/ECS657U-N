@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
+    public GameObject youWinText;
 
     private void Awake () {
         if (LevelManager.instance == null) instance = this;
@@ -16,6 +17,10 @@ public class LevelManager : MonoBehaviour
         if (_ui != null) {
             _ui.ToggleDeathPanel();
         }
+    }
+
+    public void Win(){
+        youWinText.SetActive (true);
 
     }
 }

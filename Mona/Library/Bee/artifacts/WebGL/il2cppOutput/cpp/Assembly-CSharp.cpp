@@ -624,7 +624,6 @@ IL2CPP_EXTERN_C String_t* _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745
 IL2CPP_EXTERN_C String_t* _stringLiteral24F45929493475FECA90729BA5EAF2D06F8722A4;
 IL2CPP_EXTERN_C String_t* _stringLiteral269F8BFBE6C7517C00380B92291D0799AAB2F285;
 IL2CPP_EXTERN_C String_t* _stringLiteral2A5808F3B889783C5484106C7296410EA27F30B5;
-IL2CPP_EXTERN_C String_t* _stringLiteral2E6D013ED0171F69EBC99285E1EB4C693C2860AA;
 IL2CPP_EXTERN_C String_t* _stringLiteral345A3EE965F1F41012B7EFD0F1B00FBE6C37644C;
 IL2CPP_EXTERN_C String_t* _stringLiteral3783D62DA544C4A10F6775DC60E5A763AA9BED1B;
 IL2CPP_EXTERN_C String_t* _stringLiteral3B2C1C62D4D1C2A0C8A9AC42DB00D33C654F9AD0;
@@ -680,6 +679,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteralF1B6AAF37DDF842141E903D071B58A3BDF13A5C6
 IL2CPP_EXTERN_C String_t* _stringLiteralF359E6DDFFFF3D8B034D057E57DBD8ABA4ED7FFC;
 IL2CPP_EXTERN_C String_t* _stringLiteralF85DD2405ABFE865DC00B42D092E79BB7FECBA6D;
 IL2CPP_EXTERN_C String_t* _stringLiteralFC6687DC37346CD2569888E29764F727FAF530E0;
+IL2CPP_EXTERN_C String_t* _stringLiteralFE52A928449F069BEA8C3BDC74D06A0AA67D981C;
 IL2CPP_EXTERN_C String_t* _stringLiteralFF988BE1271FBA06A4FB243CE21817E36A0AE666;
 IL2CPP_EXTERN_C const RuntimeMethod* ChatController_AddToChatOutput_m9AB8FA8A32EA23F2E55795D8301ED0BF6A59F722_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Component_GetComponentInChildren_TisTextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957_m60A1B193FDBBFB3719065622DB5E0BB21CA4ABDC_RuntimeMethod_var;
@@ -4056,6 +4056,8 @@ struct IntrotoGame_t18AFCA1FF62B7CEC0D14D118809562C110F293D1  : public MonoBehav
 // LevelManager
 struct LevelManager_t8405886BBC5A0ACBB1CC210E25D5DA1C72D16530  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.GameObject LevelManager::youWinText
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___youWinText_5;
 };
 
 struct LevelManager_t8405886BBC5A0ACBB1CC210E25D5DA1C72D16530_StaticFields
@@ -4113,16 +4115,14 @@ struct PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95  : public Mono
 	float ___speed_5;
 	// System.Int32 PlayerController::GemCount
 	int32_t ___GemCount_6;
-	// System.Int32 PlayerController::UpgradeCount
-	int32_t ___UpgradeCount_7;
 	// TMPro.TextMeshProUGUI PlayerController::GemText
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___GemText_8;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___GemText_7;
 	// TMPro.TextMeshProUGUI PlayerController::UpgradeText
-	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___UpgradeText_9;
+	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___UpgradeText_8;
 	// System.Object PlayerController::DeathFloor
-	RuntimeObject* ___DeathFloor_10;
+	RuntimeObject* ___DeathFloor_9;
 	// System.Boolean PlayerController::waterMove
-	bool ___waterMove_11;
+	bool ___waterMove_10;
 };
 
 // Respawn
@@ -6194,14 +6194,16 @@ inline UIManager_t16825A2483574F37D7D47AB939A6FA639678B1F3* Component_GetCompone
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602 (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___x0, Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C* ___y1, const RuntimeMethod* method) ;
 // System.Void UIManager::ToggleDeathPanel()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UIManager_ToggleDeathPanel_mEBBF59D1C3EC7E391095B14FB63845AC8A2069FE (UIManager_t16825A2483574F37D7D47AB939A6FA639678B1F3* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___value0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.SceneManagement.SceneManager::LoadScene(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_mBB3DBC1601A21F8F4E8A5D68FED30EA9412F218E (String_t* ___sceneName0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Debug::Log(System.Object)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB (RuntimeObject* ___message0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Application::Quit()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Application_Quit_mE304382DB9A6455C2A474C8F364C7387F37E9281 (const RuntimeMethod* method) ;
-// System.Void PlayerController::SetCountText()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetCountText_m6A9F5CF284E511EBFE348D2500F866BAB8CE2C24 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
+// System.Void PlayerController::SetGemCountText()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetGemCountText_m1F8C92A08759DB2791592E8AE5A1F7A8DB524328 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
 // TValue UnityEngine.InputSystem.InputValue::Get<UnityEngine.Vector2>()
 inline Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 InputValue_Get_TisVector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_mBA56AD2906D3B6F2B87F3DE248CB62E1AA4D2293 (InputValue_t4F053958518BDF6FD85C55F31B0597C9521B4231* __this, const RuntimeMethod* method)
 {
@@ -6224,8 +6226,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Rigidbody_AddForce_m7A3EEEED21F986917107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GameObject_get_tag_mEDD27BF795072834D656B286CBE51B2C99747805 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, const RuntimeMethod* method) ;
 // System.Boolean System.String::op_Equality(System.String,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___a0, String_t* ___b1, const RuntimeMethod* method) ;
-// System.Void UnityEngine.GameObject::SetActive(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___value0, const RuntimeMethod* method) ;
+// System.Void PlayerController::SetUpgradeText()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetUpgradeText_mF6D4F9C14ACCC3B9C96CA88240A67816758DF4EF (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) ;
+// System.Void LevelManager::Win()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelManager_Win_m1B7E455357CBCCD8D5450A718F0CAA65F9072E33 (LevelManager_t8405886BBC5A0ACBB1CC210E25D5DA1C72D16530* __this, const RuntimeMethod* method) ;
 // System.String System.Int32::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
 // System.String System.String::Concat(System.String,System.String)
@@ -7098,6 +7102,17 @@ IL_0016:
 		return;
 	}
 }
+// System.Void LevelManager::Win()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelManager_Win_m1B7E455357CBCCD8D5450A718F0CAA65F9072E33 (LevelManager_t8405886BBC5A0ACBB1CC210E25D5DA1C72D16530* __this, const RuntimeMethod* method) 
+{
+	{
+		// youWinText.SetActive (true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___youWinText_5;
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
+		// }
+		return;
+	}
+}
 // System.Void LevelManager::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LevelManager__ctor_m97F35AC08C296B73BD7D85FFB593A7BEA61B3F92 (LevelManager_t8405886BBC5A0ACBB1CC210E25D5DA1C72D16530* __this, const RuntimeMethod* method) 
 {
@@ -7296,12 +7311,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_Start_m1D83076E8B136A71
 	{
 		// GemCount = 0;
 		__this->___GemCount_6 = 0;
-		// UpgradeCount=0;
-		__this->___UpgradeCount_7 = 0;
 		// waterMove = false;
-		__this->___waterMove_11 = (bool)0;
-		// SetCountText();
-		PlayerController_SetCountText_m6A9F5CF284E511EBFE348D2500F866BAB8CE2C24(__this, NULL);
+		__this->___waterMove_10 = (bool)0;
+		// SetGemCountText();
+		PlayerController_SetGemCountText_m1F8C92A08759DB2791592E8AE5A1F7A8DB524328(__this, NULL);
 		// }
 		return;
 	}
@@ -7366,6 +7379,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnTriggerEnter_mF270487
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&LevelManager_t8405886BBC5A0ACBB1CC210E25D5DA1C72D16530_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral24F45929493475FECA90729BA5EAF2D06F8722A4);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral345A3EE965F1F41012B7EFD0F1B00FBE6C37644C);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral937CF4AA29E8BA035C35BA0901DC5699940902D9);
@@ -7394,8 +7408,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_OnTriggerEnter_mF270487
 		// GemCount += 1;
 		int32_t L_6 = __this->___GemCount_6;
 		__this->___GemCount_6 = ((int32_t)il2cpp_codegen_add(L_6, 1));
-		// SetCountText();
-		PlayerController_SetCountText_m6A9F5CF284E511EBFE348D2500F866BAB8CE2C24(__this, NULL);
+		// SetGemCountText();
+		PlayerController_SetGemCountText_m1F8C92A08759DB2791592E8AE5A1F7A8DB524328(__this, NULL);
 	}
 
 IL_0037:
@@ -7410,7 +7424,7 @@ IL_0037:
 		L_10 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_9, _stringLiteral24F45929493475FECA90729BA5EAF2D06F8722A4, NULL);
 		if (!L_10)
 		{
-			goto IL_0075;
+			goto IL_0067;
 		}
 	}
 	{
@@ -7419,71 +7433,79 @@ IL_0037:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_12;
 		L_12 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_11, NULL);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_12, (bool)0, NULL);
-		// UpgradeCount += 1;
-		int32_t L_13 = __this->___UpgradeCount_7;
-		__this->___UpgradeCount_7 = ((int32_t)il2cpp_codegen_add(L_13, 1));
 		// waterMove = true;
-		__this->___waterMove_11 = (bool)1;
-		// SetCountText();
-		PlayerController_SetCountText_m6A9F5CF284E511EBFE348D2500F866BAB8CE2C24(__this, NULL);
+		__this->___waterMove_10 = (bool)1;
+		// SetUpgradeText();
+		PlayerController_SetUpgradeText_mF6D4F9C14ACCC3B9C96CA88240A67816758DF4EF(__this, NULL);
 	}
 
-IL_0075:
+IL_0067:
 	{
 		// if (other.gameObject.tag == "Stone")
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_14 = ___other0;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
-		L_15 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_14, NULL);
-		String_t* L_16;
-		L_16 = GameObject_get_tag_mEDD27BF795072834D656B286CBE51B2C99747805(L_15, NULL);
-		bool L_17;
-		L_17 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_16, _stringLiteral937CF4AA29E8BA035C35BA0901DC5699940902D9, NULL);
-		if (!L_17)
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_13 = ___other0;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_14;
+		L_14 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_13, NULL);
+		String_t* L_15;
+		L_15 = GameObject_get_tag_mEDD27BF795072834D656B286CBE51B2C99747805(L_14, NULL);
+		bool L_16;
+		L_16 = String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1(L_15, _stringLiteral937CF4AA29E8BA035C35BA0901DC5699940902D9, NULL);
+		if (!L_16)
 		{
-			goto IL_0098;
+			goto IL_0094;
 		}
 	}
 	{
 		// other.gameObject.SetActive(false);
-		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_18 = ___other0;
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19;
-		L_19 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_18, NULL);
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_19, (bool)0, NULL);
+		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_17 = ___other0;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18;
+		L_18 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_17, NULL);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_18, (bool)0, NULL);
+		// LevelManager.instance.Win();
+		LevelManager_t8405886BBC5A0ACBB1CC210E25D5DA1C72D16530* L_19 = ((LevelManager_t8405886BBC5A0ACBB1CC210E25D5DA1C72D16530_StaticFields*)il2cpp_codegen_static_fields_for(LevelManager_t8405886BBC5A0ACBB1CC210E25D5DA1C72D16530_il2cpp_TypeInfo_var))->___instance_4;
+		LevelManager_Win_m1B7E455357CBCCD8D5450A718F0CAA65F9072E33(L_19, NULL);
 	}
 
-IL_0098:
+IL_0094:
 	{
 		// }
 		return;
 	}
 }
-// System.Void PlayerController::SetCountText()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetCountText_m6A9F5CF284E511EBFE348D2500F866BAB8CE2C24 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
+// System.Void PlayerController::SetGemCountText()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetGemCountText_m1F8C92A08759DB2791592E8AE5A1F7A8DB524328 (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral05B2166FD9361B15B1003BB37CA34F52E0484E1B);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2E6D013ED0171F69EBC99285E1EB4C693C2860AA);
 		s_Il2CppMethodInitialized = true;
 	}
 	{
 		// GemText.text = "Gem: " + GemCount.ToString();
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___GemText_8;
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___GemText_7;
 		int32_t* L_1 = (&__this->___GemCount_6);
 		String_t* L_2;
 		L_2 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_1, NULL);
 		String_t* L_3;
 		L_3 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral05B2166FD9361B15B1003BB37CA34F52E0484E1B, L_2, NULL);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_0, L_3);
-		// UpgradeText.text = "Upgrades: " + UpgradeCount.ToString();
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_4 = __this->___UpgradeText_9;
-		int32_t* L_5 = (&__this->___UpgradeCount_7);
-		String_t* L_6;
-		L_6 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_5, NULL);
-		String_t* L_7;
-		L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral2E6D013ED0171F69EBC99285E1EB4C693C2860AA, L_6, NULL);
-		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_4, L_7);
+		// }
+		return;
+	}
+}
+// System.Void PlayerController::SetUpgradeText()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerController_SetUpgradeText_mF6D4F9C14ACCC3B9C96CA88240A67816758DF4EF (PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralFE52A928449F069BEA8C3BDC74D06A0AA67D981C);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// UpgradeText.text = "Can walk on water: Yes";
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___UpgradeText_8;
+		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_0, _stringLiteralFE52A928449F069BEA8C3BDC74D06A0AA67D981C);
 		// }
 		return;
 	}
@@ -7602,7 +7624,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WaterScript_Update_mDFC4A9211BD59622C9A9
 	{
 		// if (Player.waterMove == true)
 		PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95* L_0 = __this->___Player_4;
-		bool L_1 = L_0->___waterMove_11;
+		bool L_1 = L_0->___waterMove_10;
 		if (!L_1)
 		{
 			goto IL_001e;

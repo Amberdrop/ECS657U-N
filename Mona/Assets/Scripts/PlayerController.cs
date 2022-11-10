@@ -1,3 +1,4 @@
+using System;
 using System . Collections ;
 using System . Collections . Generic ;
 using UnityEngine ;
@@ -10,7 +11,6 @@ public class PlayerController : MonoBehaviour {
 public Vector2 moveValue ;
 public float speed ;
 private int GemCount;
-private int UpgradeCount;
 public TextMeshProUGUI GemText;
 public TextMeshProUGUI UpgradeText;
 public object DeathFloor;
@@ -18,9 +18,8 @@ public bool waterMove = false;
 
 void Start () {
 GemCount = 0;
-UpgradeCount=0;
 waterMove = false;
-SetCountText();
+SetGemCountText();
 }
 
 void OnMove (InputValue value ) {
@@ -39,25 +38,27 @@ void OnTriggerEnter ( Collider other ) {
  if( other . gameObject . tag == "Gems" ) {
  other . gameObject . SetActive ( false ) ;
  GemCount += 1;
- SetCountText();
+ SetGemCountText();
  }
  if (other.gameObject.tag == "Upgrade"){
     other.gameObject.SetActive(false);
-    UpgradeCount += 1;
     waterMove = true;
 
-    SetCountText();
+    SetUpgradeText();
  }
         if (other.gameObject.tag == "Stone")
         {
             other.gameObject.SetActive(false);
-            //placeholder for now 
+            LevelManager.instance.Win();
         }
     }
 
-private void SetCountText(){
+private void SetGemCountText(){
     GemText.text = "Gem: " + GemCount.ToString();
-    UpgradeText.text = "Upgrades: " + UpgradeCount.ToString();
+}
+
+private void SetUpgradeText(){
+    UpgradeText.text = "Can walk on water: Yes";
 }
 
 }
