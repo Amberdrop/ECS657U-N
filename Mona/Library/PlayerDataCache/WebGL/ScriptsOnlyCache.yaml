@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraController
+    - EnemyMove
     - IntrotoGame
     - LevelManager
     - LevelOneStateManager
@@ -10,6 +11,7 @@ ScriptsOnlyBuild:
     - Respawn
     - UIManager
     - WaterScript
+    - distanceMove
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputSettings
@@ -139,29 +141,29 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1548}
+      Script: {instanceID: 1782}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 2794}
+      Script: {instanceID: 2980}
     - Class: 114
-      Script: {instanceID: 3006}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 4104}
+      Script: {instanceID: 4290}
     - Class: 114
-      Script: {instanceID: 5244}
+      Script: {instanceID: 5432}
     - Class: 114
-      Script: {instanceID: 5698}
+      Script: {instanceID: 5886}
     - Class: 114
-      Script: {instanceID: 6366}
+      Script: {instanceID: 6554}
     - Class: 114
-      Script: {instanceID: 6538}
+      Script: {instanceID: 6726}
     - Class: 114
-      Script: {instanceID: 6920}
+      Script: {instanceID: 7108}
     - Class: 114
-      Script: {instanceID: 6962}
+      Script: {instanceID: 7150}
     - Class: 114
-      Script: {instanceID: 7552}
+      Script: {instanceID: 7740}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -212,39 +214,43 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1548}
+      Script: {instanceID: 1782}
     - Class: 114
-      Script: {instanceID: 1600}
+      Script: {instanceID: 1786}
     - Class: 114
-      Script: {instanceID: 2452}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3006}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3340}
+      Script: {instanceID: 3526}
     - Class: 114
-      Script: {instanceID: 4068}
+      Script: {instanceID: 4254}
     - Class: 114
-      Script: {instanceID: 4558}
+      Script: {instanceID: 4348}
     - Class: 114
-      Script: {instanceID: 4912}
+      Script: {instanceID: 4746}
     - Class: 114
-      Script: {instanceID: 5698}
+      Script: {instanceID: 5100}
     - Class: 114
-      Script: {instanceID: 6366}
+      Script: {instanceID: 5886}
     - Class: 114
-      Script: {instanceID: 6538}
+      Script: {instanceID: 6554}
     - Class: 114
-      Script: {instanceID: 6920}
+      Script: {instanceID: 6726}
     - Class: 114
-      Script: {instanceID: 8058}
+      Script: {instanceID: 7108}
     - Class: 114
-      Script: {instanceID: 8400}
+      Script: {instanceID: 7938}
     - Class: 114
-      Script: {instanceID: 8718}
+      Script: {instanceID: 8246}
     - Class: 114
-      Script: {instanceID: 9004}
+      Script: {instanceID: 8588}
+    - Class: 114
+      Script: {instanceID: 8906}
+    - Class: 114
+      Script: {instanceID: 9192}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -259,6 +265,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
     - Class: 213
@@ -270,6 +278,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
     - Class: 1953259897
       Script: {instanceID: 0}
@@ -297,31 +307,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1548}
+      Script: {instanceID: 1782}
     - Class: 114
-      Script: {instanceID: 2276}
+      Script: {instanceID: 2462}
     - Class: 114
-      Script: {instanceID: 2770}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3006}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3340}
+      Script: {instanceID: 3526}
     - Class: 114
-      Script: {instanceID: 4424}
+      Script: {instanceID: 4612}
     - Class: 114
-      Script: {instanceID: 4544}
+      Script: {instanceID: 4732}
     - Class: 114
-      Script: {instanceID: 4844}
+      Script: {instanceID: 5032}
     - Class: 114
-      Script: {instanceID: 5698}
+      Script: {instanceID: 5886}
     - Class: 114
-      Script: {instanceID: 6366}
+      Script: {instanceID: 6554}
     - Class: 114
-      Script: {instanceID: 6538}
+      Script: {instanceID: 6726}
     - Class: 114
-      Script: {instanceID: 6920}
+      Script: {instanceID: 7108}
     - Class: 114
-      Script: {instanceID: 7526}
+      Script: {instanceID: 7714}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -341,16 +351,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: a6e561615949734e9f12f9b61661f43e
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Image
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
   - hash:
       serializedVersion: 2
       Hash: c24a778d9aa393e11e54bff320ca63de
@@ -753,6 +763,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 26fe8d64d18a6adb64611d959c11fe05
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyMove
   - hash:
       serializedVersion: 2
       Hash: 8b1fe5dfdcf943fb3b72506b9f19335f
@@ -1337,6 +1353,12 @@ ScriptsOnlyBuild:
     className: UnityOnScrollRectValueChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 72e6e444a9d24d31e4157b2f5692bf71
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: distanceMove
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1556,4 +1578,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Intro.unity
   - Assets/Scenes/Level1.unity
-  playerPath: /Users/mona/Documents/GameDev/ECS657U-N/build
+  playerPath: C:/Users/Student/Documents/GitHub/ECS657U-N/build
