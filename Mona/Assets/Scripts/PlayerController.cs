@@ -54,7 +54,7 @@ void OnTriggerEnter ( Collider other ) {
     }
 
 private void SetGemCountText(){
-    GemText.text = "Gem: " + GemCount.ToString();
+    GemText.text = "Gems: " + GemCount.ToString() + "/16";
 }
 
 private void SetUpgradeText(){
