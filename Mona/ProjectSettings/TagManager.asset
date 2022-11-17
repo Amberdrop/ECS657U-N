@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Gems
   - Screw
+  - Upgrade
+  - Stone
+  - PLayer
   layers:
   - Default
   - TransparentFX

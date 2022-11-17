@@ -1,3 +1,4 @@
+using System;
 using System . Collections ;
 using System . Collections . Generic ;
 using UnityEngine ;
@@ -10,14 +11,15 @@ public class PlayerController : MonoBehaviour {
 public Vector2 moveValue ;
 public float speed ;
 private int GemCount;
-private int ScrewCount;
 public TextMeshProUGUI GemText;
-public TextMeshProUGUI ScrewText;
+public TextMeshProUGUI UpgradeText;
+public object DeathFloor;
+public bool waterMove = false;
 
 void Start () {
 GemCount = 0;
-ScrewCount=0;
-SetCountText();
+waterMove = false;
+SetGemCountText();
 }
 
 void OnMove (InputValue value ) {
@@ -25,7 +27,7 @@ moveValue = value.Get < Vector2 >() ;
 }
 
 void FixedUpdate () {
-Vector3 movement = new Vector3 ( moveValue .x , 0.0f , moveValue . y ) ;
+Vector3 movement = new Vector3 ( moveValue .x , 0.0f , moveValue . y );
 
 GetComponent < Rigidbody >() . AddForce ( movement * speed * Time .
 fixedDeltaTime ) ;
@@ -36,18 +38,27 @@ void OnTriggerEnter ( Collider other ) {
  if( other . gameObject . tag == "Gems" ) {
  other . gameObject . SetActive ( false ) ;
  GemCount += 1;
- SetCountText();
+ SetGemCountText();
  }
- if (other.gameObject.tag == "Screw"){
-    other.gameObject.SetActive( false);
-    ScrewCount += 1;
-    SetCountText();
+ if (other.gameObject.tag == "Upgrade"){
+    other.gameObject.SetActive(false);
+    waterMove = true;
+
+    SetUpgradeText();
  }
+        if (other.gameObject.tag == "Stone")
+        {
+            other.gameObject.SetActive(false);
+            LevelManager.instance.Win();
+        }
+    }
+
+private void SetGemCountText(){
+    GemText.text = "Gems: " + GemCount.ToString() + "/16";
 }
 
-private void SetCountText(){
-    GemText.text = "Gem: " + GemCount.ToString();
-    ScrewText.text = "Screw: " + ScrewCount.ToString();
+private void SetUpgradeText(){
+    UpgradeText.text = "Can walk on water: Yes";
 }
 
 }

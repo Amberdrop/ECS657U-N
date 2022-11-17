@@ -6,8 +6,15 @@ public class Respawn : MonoBehaviour
 {
     public GameObject Player;
     public GameObject RespawnPoint;
-   
+
    void OnTriggerEnter(Collider other){
-    Player.transform.position = RespawnPoint.transform.position;
-   }
+        if (other.gameObject.tag == "Player") { 
+            LevelManager.instance.GameOver();
+            gameObject.SetActive(false);
+            /// Player.transform.position = RespawnPoint.transform.position;
+    } 
+  }
+
+
 }
+ 
