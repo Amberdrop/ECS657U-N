@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: b3633299af9c996498bc5cf7ded63434, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 921dc2ac42bb044d9a114378d2339c7e, type: 2}
 --- !u!1 &5109675
 GameObject:
   m_ObjectHideFlags: 0
@@ -7627,9 +7627,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b467b15a4dbe7b843a55870d138b3432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 1124434254}
-  distance: 0
-  originalPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1112710166
 PrefabInstance:
   m_ObjectHideFlags: 0
