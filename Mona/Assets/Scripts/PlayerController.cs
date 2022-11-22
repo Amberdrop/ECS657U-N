@@ -18,43 +18,45 @@ public object DeathFloor;
 public bool waterMove = false;
 
 void Start () {
-GemCount = 0;
-waterMove = false;
-SetGemCountText();
-pop = GetComponent<AudioSource>();
+    GemCount = 0;
+    waterMove = false;
+    SetGemCountText();
+    pop = GetComponent<AudioSource>();
 }
 
 void OnMove (InputValue value ) {
-moveValue = value.Get < Vector2 >() ;
+    moveValue = value.Get < Vector2 >() ;
 }
 
 void FixedUpdate () {
-Vector3 movement = new Vector3 ( moveValue .x , 0.0f , moveValue . y );
+    Vector3 movement = new Vector3 ( moveValue .x , 0.0f , moveValue . y );
 
-GetComponent < Rigidbody >() . AddForce ( movement * speed * Time .
-fixedDeltaTime ) ;
+    GetComponent < Rigidbody >() . AddForce ( movement * speed * Time .
+    fixedDeltaTime ) ;
 }
 
 
-void OnTriggerEnter ( Collider other ) {
- if( other . gameObject . tag == "Gems" ) {
- other . gameObject . SetActive ( false ) ;
- GemCount += 1;
- SetGemCountText();
- pop.Play();
- }
- if (other.gameObject.tag == "Upgrade"){
-    other.gameObject.SetActive(false);
-    waterMove = true;
+void OnTriggerEnter(Collider other){
+     if( other . gameObject . tag == "Gems" ) {
+         other . gameObject . SetActive ( false ) ;
+         GemCount += 1;
+         SetGemCountText();
+         pop.Play();
+     }
 
-    SetUpgradeText();
+     if (other.gameObject.tag == "Upgrade"){
+        other.gameObject.SetActive(false);
+        waterMove = true;
+
+        SetUpgradeText();
+     }
+
+     if (other.gameObject.tag == "Stone")
+     {
+        other.gameObject.SetActive(false);
+        LevelManager.instance.Win();
+     }
  }
-        if (other.gameObject.tag == "Stone")
-        {
-            other.gameObject.SetActive(false);
-            LevelManager.instance.Win();
-        }
-    }
 
 private void SetGemCountText(){
     GemText.text = "Gems: " + GemCount.ToString() + "/16";

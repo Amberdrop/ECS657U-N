@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5275,6 +5275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1110808678}
+  walkRadius: 50
+  speed: 5
 --- !u!195 &752634691
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -7626,6 +7628,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1124434254}
+  distance: 0
+  originalPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &1112710166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7726,6 +7730,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1110808678}
+  walkRadius: 50
+  speed: 5
 --- !u!195 &1124434249
 NavMeshAgent:
   m_ObjectHideFlags: 0
