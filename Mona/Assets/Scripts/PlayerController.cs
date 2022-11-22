@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour {
 public Vector2 moveValue ;
 public float speed ;
 private int GemCount;
+private AudioSource pop;
 public TextMeshProUGUI GemText;
 public TextMeshProUGUI UpgradeText;
 public object DeathFloor;
@@ -20,6 +21,7 @@ void Start () {
 GemCount = 0;
 waterMove = false;
 SetGemCountText();
+pop = GetComponent<AudioSource>();
 }
 
 void OnMove (InputValue value ) {
@@ -39,6 +41,7 @@ void OnTriggerEnter ( Collider other ) {
  other . gameObject . SetActive ( false ) ;
  GemCount += 1;
  SetGemCountText();
+ pop.Play();
  }
  if (other.gameObject.tag == "Upgrade"){
     other.gameObject.SetActive(false);
