@@ -1,35 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
 
-public class distanceMove : MonoBehaviour
-{
-    [SerializeField] private Transform Enemy;
+//public class distanceMove : MonoBehaviour
+//{
+//    [SerializeField] private Transform Enemy;
 
-    private float distance;
+//    private float distance;
 
-    Vector3 originalPos;
+//    Vector3 originalPos;
 
-    private void Start()
-    {
-        originalPos = Enemy.transform.position;
-    }
+//    private void Start()
+//    {
+//        originalPos = Enemy.transform.position;
+//    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // calculate distance
-        distance = (Enemy.transform.position - transform.position).magnitude;
+//    // Update is called once per frame
+//    void Update()
+//    {
+//        // calculate distance
+//        distance = (Enemy.transform.position - transform.position).magnitude;
 
-        if (distance > 10)
-        {
-            //Enemy.gameObject.SetActive(false);
-            Enemy.transform.position = originalPos;
-        }
+//        if (distance > 10)
+//        {
+//            //Enemy.gameObject.SetActive(false);
+//            Enemy.transform.position = originalPos;
+//        }
 
-        else
-        {
-            Enemy.gameObject.SetActive(true);
-        }
-    }
-}
+//        else
+//        {
+//            Enemy.gameObject.SetActive(true);
+//        }
+//    }
+//}
