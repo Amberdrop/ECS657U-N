@@ -13,13 +13,17 @@ public float speed ;
 private int GemCount;
 public TextMeshProUGUI GemText;
 public TextMeshProUGUI UpgradeText;
+public TextMeshProUGUI MapUpgradeText;
 public object DeathFloor;
+public GameObject MapButton;
 public bool waterMove = false;
+public bool mapOpen = false;
 
 void Start () {
 GemCount = 0;
 waterMove = false;
 SetGemCountText();
+mapOpen = false;
 }
 
 void OnMove (InputValue value ) {
@@ -46,6 +50,12 @@ void OnTriggerEnter ( Collider other ) {
 
     SetUpgradeText();
  }
+  else if (other.gameObject.tag == "MapUpgrade"){
+    other.gameObject.SetActive(false);
+    mapOpen = true;
+    MapButton.SetActive(true);
+    SetMapUpgradeText();
+ }
         if (other.gameObject.tag == "Stone")
         {
             other.gameObject.SetActive(false);
@@ -59,6 +69,10 @@ private void SetGemCountText(){
 
 private void SetUpgradeText(){
     UpgradeText.text = "Can walk on water: Yes";
+}
+
+private void SetMapUpgradeText(){
+    MapUpgradeText.text = "Can open map: Yes";
 }
 
 }
