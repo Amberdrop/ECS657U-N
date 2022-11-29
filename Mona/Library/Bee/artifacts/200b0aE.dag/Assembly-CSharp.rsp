@@ -372,6 +372,7 @@
 "Assets/Scripts/LevelOneManager.cs"
 "Assets/Scripts/LevelOneStateManager.cs"
 "Assets/Scripts/MainMenuScript.cs"
+"Assets/Scripts/MiniMapScript.cs"
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/Respawn.cs"
 "Assets/Scripts/UIManager.cs"
