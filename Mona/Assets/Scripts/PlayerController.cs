@@ -63,7 +63,7 @@ private void SetGemCountText(){
 }
 
 private void SetUpgradeText(){
-    UpgradeText.text = "Can walk on water: Yes";
+    UpgradeText.text = "Water Up: Yes";
 }
 
 }

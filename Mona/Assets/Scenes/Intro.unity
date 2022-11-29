@@ -297,7 +297,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8619071519479605847, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -699,8 +699,6 @@ PlayableDirector:
     value: {fileID: 1370732911}
   - key: {fileID: -6843718336147159310, guid: b471859ae99e14d179ad2dc37de55b4a, type: 2}
     value: {fileID: 1555258294}
-  - key: {fileID: 343924836726979825, guid: b471859ae99e14d179ad2dc37de55b4a, type: 2}
-    value: {fileID: 2119947217}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &903313891
@@ -1476,11 +1474,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090916533}
   m_CullTransparentMesh: 1
---- !u!1 &2119947217 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8619071519479605847, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
-  m_PrefabInstance: {fileID: 174812285}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8619071520002229083
 PrefabInstance:
   m_ObjectHideFlags: 0
