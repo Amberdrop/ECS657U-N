@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -196,13 +195,13 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 903313894}
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_text
       value: 'Goal: Find the purple quantum stone located somewhere on the island.
-        If you fall into the water before collecting the water upgrade OR run into
-        one of Elon''s robots OR fall off the planet, you will die. '
+        You will need to find the water upgrade in order to cross the ocean. '
       objectReference: {fileID: 0}
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_fontStyle
@@ -301,6 +300,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
 --- !u!224 &174812286 stripped
 RectTransform:
@@ -312,6 +312,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 903313894}
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
@@ -413,6 +414,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
 --- !u!224 &223592057 stripped
 RectTransform:
@@ -429,6 +431,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 903313894}
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
@@ -529,6 +532,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
 --- !u!224 &304394051 stripped
 RectTransform:
@@ -757,6 +761,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -878,6 +883,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 903313894}
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
@@ -978,6 +984,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
 --- !u!1 &1235718489 stripped
 GameObject:
@@ -994,12 +1001,13 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 903313894}
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_text
-      value: "There are booster items you can collect on each island to help you
-        explore the island. Gems are useful too. \n\nGood Luck! "
+      value: 'There are booster items you can collect on each island to help you
+        explore the island. Gems are useful too.  '
       objectReference: {fileID: 0}
     - target: {fileID: 8619071519479605846, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_Pivot.x
@@ -1094,6 +1102,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
 --- !u!224 &1370732910 stripped
 RectTransform:
@@ -1110,6 +1119,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 903313894}
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
@@ -1216,6 +1226,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
 --- !u!224 &1555258293 stripped
 RectTransform:
@@ -1232,6 +1243,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 903313894}
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
@@ -1332,6 +1344,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
 --- !u!1 &1717877611
 GameObject:
@@ -1473,6 +1486,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 903313894}
     m_Modifications:
     - target: {fileID: 8619071519479605846, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
@@ -1568,4 +1582,5 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
