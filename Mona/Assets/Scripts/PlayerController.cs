@@ -14,14 +14,18 @@ private int GemCount;
 private AudioSource pop;
 public TextMeshProUGUI GemText;
 public TextMeshProUGUI UpgradeText;
+public TextMeshProUGUI MapUpgradeText;
+public GameObject MapButton;
 public object DeathFloor;
 public bool waterMove = false;
+public bool mapOpen = false;
 
 void Start () {
     GemCount = 0;
     waterMove = false;
     SetGemCountText();
     pop = GetComponent<AudioSource>();
+    mapOpen = false;
 }
 
 void OnMove (InputValue value ) {
@@ -49,8 +53,12 @@ void OnTriggerEnter(Collider other){
         waterMove = true;
 
         SetUpgradeText();
+     } else if (other.gameObject.tag == "MapUpgrade"){
+        other.gameObject.SetActive(false);
+        mapOpen = true;
+        MapButton.SetActive(true);
+        SetMapUpgradeText();
      }
-
      if (other.gameObject.tag == "Stone")
      {
         other.gameObject.SetActive(false);
@@ -64,6 +72,10 @@ private void SetGemCountText(){
 
 private void SetUpgradeText(){
     UpgradeText.text = "Water Up: Yes";
+}
+
+private void SetMapUpgradeText(){
+    MapUpgradeText.text = "Can open map: Yes";
 }
 
 }
