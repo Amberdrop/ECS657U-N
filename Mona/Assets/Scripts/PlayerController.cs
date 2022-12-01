@@ -8,6 +8,7 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour {
 
+public Transform cam;
 public Vector2 moveValue ;
 public float speed ;
 private int GemCount;
@@ -35,8 +36,17 @@ void OnMove (InputValue value ) {
 void FixedUpdate () {
     Vector3 movement = new Vector3 ( moveValue .x , 0.0f , moveValue . y );
 
-    GetComponent < Rigidbody >() . AddForce ( movement * speed * Time .
+    
+    //to get the player to turn to the direction that it is traveling
+    float targetAngle = Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+    transform.rotation = Quaternion.Euler(0f,targetAngle,0f);
+
+    //to get player to move in the direction that camera is pointing at
+    Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+
+    GetComponent < Rigidbody >() . AddForce (moveDir.normalized * speed * Time .
     fixedDeltaTime ) ;
+
 }
 
 
