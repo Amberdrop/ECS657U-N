@@ -17,7 +17,6 @@ public TextMeshProUGUI GemText;
 public TextMeshProUGUI UpgradeText;
 public TextMeshProUGUI MapUpgradeText;
 public GameObject MapButton;
-public object DeathFloor;
 public bool waterMove = false;
 public bool mapOpen = false;
 
@@ -51,6 +50,7 @@ void FixedUpdate () {
 
 
 void OnTriggerEnter(Collider other){
+    //if player collides with gem, increase gem count
      if( other . gameObject . tag == "Gems" ) {
          other . gameObject . SetActive ( false ) ;
          GemCount += 1;
@@ -58,17 +58,20 @@ void OnTriggerEnter(Collider other){
          pop.Play();
      }
 
+    //if player collides with water upgrade, allow for water movement
      if (other.gameObject.tag == "Upgrade"){
         other.gameObject.SetActive(false);
         waterMove = true;
 
         SetUpgradeText();
+    //if player collides w map upgrade, enable map button
      } else if (other.gameObject.tag == "MapUpgrade"){
         other.gameObject.SetActive(false);
         mapOpen = true;
         MapButton.SetActive(true);
         SetMapUpgradeText();
      }
+     //if player achieves quantum stone, win text pops up
      if (other.gameObject.tag == "Stone")
      {
         other.gameObject.SetActive(false);
