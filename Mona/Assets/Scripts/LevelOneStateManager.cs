@@ -6,11 +6,15 @@ using UnityEngine.SceneManagement;
 public class LevelOneManager : MonoBehaviour
 {
     public void RetryGame (){
+        Time.timeScale=1;
          SceneManager.LoadScene ("Level1");
+         
     }
 
     public void BackToMenu(){
+        Time.timeScale=1;
         SceneManager.LoadScene("Menu");
+        
     }
 
 }
