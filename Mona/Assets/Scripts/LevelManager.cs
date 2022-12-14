@@ -7,12 +7,17 @@ public class LevelManager : MonoBehaviour
     public static LevelManager instance;
     public GameObject youWinText;
 
+    [SerializeField] private AudioSource gameOverSound;
+
     private void Awake () {
         if (LevelManager.instance == null) instance = this;
         else Destroy(gameObject);
     }
 
     public void GameOver(){
+
+        gameOverSound.Play();
+        
         UIManager _ui = GetComponent<UIManager>();
         
         //turn on death panel when player dies
