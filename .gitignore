@@ -2,7 +2,12 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/Mona/[Ll]ibrary/
+/Mona/Library/
+/Mona/Temp/
+/Mona/Obj/
+/Mona/Logs/
+/Mona/MemoryCaptures/
+/Mona/Ll]ibrary/
 /Mona/[Tt]emp/
 /Mona/[Oo]bj/
 /Mona/[Ll]ogs/
