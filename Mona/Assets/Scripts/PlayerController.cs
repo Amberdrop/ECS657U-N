@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour {
     public Vector2 moveValue ;
     public float speed ;
     private int GemCount;
-    private AudioSource pop;
     public TextMeshProUGUI GemText;
     public TextMeshProUGUI UpgradeText;
     public TextMeshProUGUI MapUpgradeText;
@@ -21,13 +20,13 @@ public class PlayerController : MonoBehaviour {
     public bool mapOpen = false;
 
     [SerializeField] private AudioSource collectGemSoundEffect;
+    [SerializeField] private AudioSource collectUpgradeSoundEffect;
 
 
     void Start () {
         GemCount = 0;
         waterMove = false;
         SetGemCountText();
-        pop = GetComponent<AudioSource>();
         mapOpen = false;
     }
 
@@ -58,7 +57,6 @@ public class PlayerController : MonoBehaviour {
             other . gameObject . SetActive ( false ) ;
             GemCount += 1;
             SetGemCountText();
-            // pop.Play();
             collectGemSoundEffect.Play();
         }
 
@@ -66,13 +64,14 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.tag == "Upgrade"){
             other.gameObject.SetActive(false);
             waterMove = true;
-
+            collectUpgradeSoundEffect.Play();
             SetUpgradeText();
         //if player collides w map upgrade, enable map button
         } else if (other.gameObject.tag == "MapUpgrade"){
             other.gameObject.SetActive(false);
             mapOpen = true;
             MapButton.SetActive(true);
+            collectUpgradeSoundEffect.Play();
             SetMapUpgradeText();
         }
         //if player achieves quantum stone, win text pops up
