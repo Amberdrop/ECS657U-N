@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager instance;
     public GameObject youWinText;
+    public Button InventoryButton;
+    public Button MapButton;
 
     [SerializeField] private AudioSource gameOverSound;
 
@@ -27,6 +30,8 @@ public class LevelManager : MonoBehaviour
 
         //ensure game is paused when player dies
         Time.timeScale=0f;
+        MapButton.gameObject.SetActive(false);
+        InventoryButton.gameObject.SetActive(false);
     }
 
     public void Win(){
