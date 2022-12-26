@@ -15,6 +15,15 @@ public class PlayerController : MonoBehaviour {
     public TextMeshProUGUI GemText;
     public TextMeshProUGUI UpgradeText;
     public TextMeshProUGUI MapUpgradeText;
+    public TextMeshProUGUI Slot1Text;
+    public Image img1;
+    public TextMeshProUGUI Slot2Text;
+    public Image img2;
+    public TextMeshProUGUI Slot3Text;
+    public Image img3;
+    public TextMeshProUGUI Slot4Text;
+    public Image img4;
+
     public GameObject MapButton;
     public bool waterMove = false;
     public bool mapOpen = false;
@@ -80,6 +89,35 @@ public class PlayerController : MonoBehaviour {
             other.gameObject.SetActive(false);
             LevelManager.instance.Win();
         }
+
+        //if player collects first slot diary entry
+        if (other.gameObject.tag == "Slot1"){
+            other.gameObject.SetActive(false);
+            img1.gameObject.SetActive(false);
+            SetSlot1Text();
+        }
+
+        //if player collects second slot diary entry
+        if (other.gameObject.tag == "Slot2"){
+            other.gameObject.SetActive(false);
+            img2.gameObject.SetActive(false);
+            SetSlot2Text();
+        }
+        
+        //if player collects second slot diary entry
+        if (other.gameObject.tag == "Slot3"){
+            other.gameObject.SetActive(false);
+            img3.gameObject.SetActive(false);
+            SetSlot3Text();
+        }
+
+        //if player collects second slot diary entry
+        if (other.gameObject.tag == "Slot4"){
+            other.gameObject.SetActive(false);
+            img4.gameObject.SetActive(false);
+            SetSlot4Text();
+        }
+
     }
 
     private void SetGemCountText(){
@@ -92,6 +130,21 @@ public class PlayerController : MonoBehaviour {
 
     private void SetMapUpgradeText(){
         MapUpgradeText.text = "Can open map: Yes";
+    }
+
+    private void SetSlot1Text(){
+        Slot1Text.text = "#1 Diary Entry slot holder";
+    }
+    private void SetSlot2Text(){
+        Slot2Text.text = "#2 Diary Entry slot holder";
+    }
+
+    private void SetSlot3Text(){
+        Slot3Text.text = "#3 Diary Entry slot holder";
+    }
+
+    private void SetSlot4Text(){
+        Slot4Text.text = "#4 Diary Entry slot holder";
     }
 
 }
