@@ -28,8 +28,8 @@ public class PlayerController : MonoBehaviour {
     public bool waterMove = false;
     public bool mapOpen = false;
 
-    [SerializeField] private AudioSource collectGemSoundEffect;
-    [SerializeField] private AudioSource collectUpgradeSoundEffect;
+    // [SerializeField] private AudioSource collectGemSoundEffect;
+    // [SerializeField] private AudioSource collectUpgradeSoundEffect;
 
 
     void Start () {
@@ -66,21 +66,22 @@ public class PlayerController : MonoBehaviour {
             other . gameObject . SetActive ( false ) ;
             GemCount += 1;
             SetGemCountText();
-            collectGemSoundEffect.Play();
+            // SoundManager.instance.PlayGemSound();
+            // collectGemSoundEffect.Play();
         }
 
         //if player collides with water upgrade, allow for water movement
         if (other.gameObject.tag == "Upgrade"){
             other.gameObject.SetActive(false);
             waterMove = true;
-            collectUpgradeSoundEffect.Play();
+            // collectUpgradeSoundEffect.Play();
             SetUpgradeText();
         //if player collides w map upgrade, enable map button
         } else if (other.gameObject.tag == "MapUpgrade"){
             other.gameObject.SetActive(false);
             mapOpen = true;
             MapButton.SetActive(true);
-            collectUpgradeSoundEffect.Play();
+            // collectUpgradeSoundEffect.Play();
             SetMapUpgradeText();
         }
         //if player achieves quantum stone, win text pops up

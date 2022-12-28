@@ -14,8 +14,11 @@ public class MainMenuScript : MonoBehaviour
     }
 
     public void QuitGame () {
-
         Debug.Log("QUIT!");
         Application.Quit();
+    }
+
+    public void ChangeMasterVolume(float value) {
+        AudioListener.volume = value;
     }
 }
