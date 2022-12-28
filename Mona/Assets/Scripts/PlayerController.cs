@@ -12,24 +12,16 @@ public class PlayerController : MonoBehaviour {
     public Vector2 moveValue ;
     public float speed ;
     private int GemCount;
-    public TextMeshProUGUI GemText;
-    public TextMeshProUGUI UpgradeText;
-    public TextMeshProUGUI MapUpgradeText;
-    public TextMeshProUGUI Slot1Text;
-    public Image img1;
-    public TextMeshProUGUI Slot2Text;
-    public Image img2;
-    public TextMeshProUGUI Slot3Text;
-    public Image img3;
-    public TextMeshProUGUI Slot4Text;
-    public Image img4;
+    
+    public TextMeshProUGUI GemText, UpgradeText, MapUpgradeText;
+    public TextMeshProUGUI Slot1Text, Slot2Text, Slot3Text, Slot4Text;
+    public Image img1, img2, img3, img4;
 
     public GameObject MapButton;
     public bool waterMove = false;
     public bool mapOpen = false;
 
     [SerializeField] private AudioSource collectGemSoundEffect, collectUpgradeSoundEffect, collectSlotSoundEffect;
-
 
     void Start () {
         GemCount = 0;
@@ -40,13 +32,6 @@ public class PlayerController : MonoBehaviour {
 
     void OnMove (InputValue value ) {
         moveValue = value.Get < Vector2 >() ;
-    }
-
-    private void playSound(AudioSource audioSource) {
-        if (PlayerPrefs.HasKey("volume")) {
-            audioSource.volume = PlayerPrefs.GetFloat("volume");
-        }
-        audioSource.Play();
     }
 
     void FixedUpdate () {
@@ -67,71 +52,82 @@ public class PlayerController : MonoBehaviour {
 
 
     void OnTriggerEnter(Collider other){
-        //if player collides with gem, increase gem count
-        if( other . gameObject . tag == "Gems" ) {
-            other . gameObject . SetActive ( false ) ;
-            GemCount += 1;
-            SetGemCountText();
-            playSound(collectGemSoundEffect);
-            // SoundManager.instance.PlayGemSound();
-            // collectGemSoundEffect.Play();
-        }
 
-        //if player collides with water upgrade, allow for water movement
-        if (other.gameObject.tag == "Upgrade"){
-            other.gameObject.SetActive(false);
-            waterMove = true;
-            playSound(collectUpgradeSoundEffect);
-            // collectUpgradeSoundEffect.Play();
-            SetUpgradeText();
-        //if player collides w map upgrade, enable map button
-        } else if (other.gameObject.tag == "MapUpgrade"){
-            other.gameObject.SetActive(false);
-            mapOpen = true;
-            MapButton.SetActive(true);
-            playSound(collectUpgradeSoundEffect);
-            // collectUpgradeSoundEffect.Play();
-            SetMapUpgradeText();
-        }
-        //if player achieves quantum stone, win text pops up
-        if (other.gameObject.tag == "Stone")
+        switch (other.gameObject.tag)
         {
-            other.gameObject.SetActive(false);
-            LevelManager.instance.Win();
-        }
+            //if player collides with gem, increase gem count
+            case "Gems":
+                other . gameObject . SetActive ( false ) ;
+                GemCount += 1;
+                SetGemCountText();
+                playSound(collectGemSoundEffect);
+                break;
+            
+            //if player collides with water upgrade, allow for water movement
+            case "Upgrade":
+                other.gameObject.SetActive(false);
+                waterMove = true;
+                playSound(collectUpgradeSoundEffect);
+                SetUpgradeText();
+                break;
+            
+            //if player collides w map upgrade, enable map button
+            case "MapUpgrade":
+                other.gameObject.SetActive(false);
+                mapOpen = true;
+                MapButton.SetActive(true);
+                playSound(collectUpgradeSoundEffect);
+                SetMapUpgradeText();
+                break;
+            
+            //if player achieves quantum stone, win text pops up
+            case "Stone":
+                other.gameObject.SetActive(false);
+                LevelManager.instance.Win();
+                break;
+            
+            //if player collects first slot diary entry
+            case "Slot1":
+                playSound(collectSlotSoundEffect);
+                other.gameObject.SetActive(false);
+                img1.gameObject.SetActive(false);
+                SetSlot1Text();
+                break;
+            
+            //if player collects second slot diary entry
+            case "Slot2":
+                playSound(collectSlotSoundEffect);
+                other.gameObject.SetActive(false);
+                img2.gameObject.SetActive(false);
+                SetSlot2Text();
+                break;
+            
+            //if player collects third slot diary entry
+            case "Slot3":
+                playSound(collectSlotSoundEffect);
+                other.gameObject.SetActive(false);
+                img3.gameObject.SetActive(false);
+                SetSlot3Text();
+                break;
 
-        //if player collects first slot diary entry
-        if (other.gameObject.tag == "Slot1"){
-            playSound(collectSlotSoundEffect);
-            other.gameObject.SetActive(false);
-            img1.gameObject.SetActive(false);
-            SetSlot1Text();
-        }
+            //if player collects forth slot diary entry
+            case "Slot4":
+                playSound(collectSlotSoundEffect);
+                other.gameObject.SetActive(false);
+                img4.gameObject.SetActive(false);
+                SetSlot4Text();
+                break;
 
-        //if player collects second slot diary entry
-        if (other.gameObject.tag == "Slot2"){
-            playSound(collectSlotSoundEffect);
-            other.gameObject.SetActive(false);
-            img2.gameObject.SetActive(false);
-            SetSlot2Text();
+            default:
+                break;
         }
-        
-        //if player collects third slot diary entry
-        if (other.gameObject.tag == "Slot3"){
-            playSound(collectSlotSoundEffect);
-            other.gameObject.SetActive(false);
-            img3.gameObject.SetActive(false);
-            SetSlot3Text();
-        }
+    }
 
-        //if player collects forth slot diary entry
-        if (other.gameObject.tag == "Slot4"){
-            playSound(collectSlotSoundEffect);
-            other.gameObject.SetActive(false);
-            img4.gameObject.SetActive(false);
-            SetSlot4Text();
+    private void playSound(AudioSource audioSource) {
+        if (PlayerPrefs.HasKey("volume")) {
+            audioSource.volume = PlayerPrefs.GetFloat("volume");
         }
-
+        audioSource.Play();
     }
 
     private void SetGemCountText(){
