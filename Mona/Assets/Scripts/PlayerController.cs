@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour {
     public bool waterMove = false;
     public bool mapOpen = false;
 
-    [SerializeField] private AudioSource collectGemSoundEffect, collectUpgradeSoundEffect;
+    [SerializeField] private AudioSource collectGemSoundEffect, collectUpgradeSoundEffect, collectSlotSoundEffect;
 
 
     void Start () {
@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour {
 
         //if player collects first slot diary entry
         if (other.gameObject.tag == "Slot1"){
+            playSound(collectSlotSoundEffect);
             other.gameObject.SetActive(false);
             img1.gameObject.SetActive(false);
             SetSlot1Text();
@@ -109,20 +110,23 @@ public class PlayerController : MonoBehaviour {
 
         //if player collects second slot diary entry
         if (other.gameObject.tag == "Slot2"){
+            playSound(collectSlotSoundEffect);
             other.gameObject.SetActive(false);
             img2.gameObject.SetActive(false);
             SetSlot2Text();
         }
         
-        //if player collects second slot diary entry
+        //if player collects third slot diary entry
         if (other.gameObject.tag == "Slot3"){
+            playSound(collectSlotSoundEffect);
             other.gameObject.SetActive(false);
             img3.gameObject.SetActive(false);
             SetSlot3Text();
         }
 
-        //if player collects second slot diary entry
+        //if player collects forth slot diary entry
         if (other.gameObject.tag == "Slot4"){
+            playSound(collectSlotSoundEffect);
             other.gameObject.SetActive(false);
             img4.gameObject.SetActive(false);
             SetSlot4Text();
