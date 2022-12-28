@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour {
     private void playSound(AudioSource audioSource) {
         if (PlayerPrefs.HasKey("volume")) {
             audioSource.volume = PlayerPrefs.GetFloat("volume");
-            Debug.Log("Volume is "+PlayerPrefs.GetFloat("volume"));
         }
         audioSource.Play();
     }
