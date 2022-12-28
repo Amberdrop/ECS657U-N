@@ -28,8 +28,7 @@ public class PlayerController : MonoBehaviour {
     public bool waterMove = false;
     public bool mapOpen = false;
 
-    // [SerializeField] private AudioSource collectGemSoundEffect;
-    // [SerializeField] private AudioSource collectUpgradeSoundEffect;
+    [SerializeField] private AudioSource collectGemSoundEffect, collectUpgradeSoundEffect;
 
 
     void Start () {
@@ -41,6 +40,14 @@ public class PlayerController : MonoBehaviour {
 
     void OnMove (InputValue value ) {
         moveValue = value.Get < Vector2 >() ;
+    }
+
+    private void playSound(AudioSource audioSource) {
+        if (PlayerPrefs.HasKey("volume")) {
+            audioSource.volume = PlayerPrefs.GetFloat("volume");
+            Debug.Log("Volume is "+PlayerPrefs.GetFloat("volume"));
+        }
+        audioSource.Play();
     }
 
     void FixedUpdate () {
@@ -66,6 +73,7 @@ public class PlayerController : MonoBehaviour {
             other . gameObject . SetActive ( false ) ;
             GemCount += 1;
             SetGemCountText();
+            playSound(collectGemSoundEffect);
             // SoundManager.instance.PlayGemSound();
             // collectGemSoundEffect.Play();
         }
@@ -74,6 +82,7 @@ public class PlayerController : MonoBehaviour {
         if (other.gameObject.tag == "Upgrade"){
             other.gameObject.SetActive(false);
             waterMove = true;
+            playSound(collectUpgradeSoundEffect);
             // collectUpgradeSoundEffect.Play();
             SetUpgradeText();
         //if player collides w map upgrade, enable map button
@@ -81,6 +90,7 @@ public class PlayerController : MonoBehaviour {
             other.gameObject.SetActive(false);
             mapOpen = true;
             MapButton.SetActive(true);
+            playSound(collectUpgradeSoundEffect);
             // collectUpgradeSoundEffect.Play();
             SetMapUpgradeText();
         }
