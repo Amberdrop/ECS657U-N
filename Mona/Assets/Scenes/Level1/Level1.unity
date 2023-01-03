@@ -10032,7 +10032,7 @@ GameObject:
   m_Component:
   - component: {fileID: 942147488}
   m_Layer: 0
-  m_Name: Goal Box
+  m_Name: End Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20570,7 +20570,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858797943}
-  m_LocalRotation: {x: 0.106977664, y: 0.000000004276911, z: -4.6017462e-10, w: 0.99426144}
+  m_LocalRotation: {x: 0.106977664, y: -0.000000004276911, z: 4.6017462e-10, w: 0.99426144}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

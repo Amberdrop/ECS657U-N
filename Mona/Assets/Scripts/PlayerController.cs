@@ -119,7 +119,8 @@ public class PlayerController : MonoBehaviour {
                 img4.gameObject.SetActive(false);
                 SetSlot4Text();
                 break;
-
+            
+            //if player enters the trigger box for the keycode input
             case "Password":
                 //InputSoFar.SetActive(true);
                 Button1.SetActive(true);
@@ -140,6 +141,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    // remove GUI for code input when outside the box
     void OnTriggerExit(Collider other)
     {
         switch (other.gameObject.tag)
