@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour {
             
             //if player collects first slot diary entry
             case "Slot1":
-                playSound(collectSlotSoundEffect);
+               // playSound(collectSlotSoundEffect);
                 other.gameObject.SetActive(false);
                 img1.gameObject.SetActive(false);
                 SetSlot1Text();
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour {
             
             //if player collects second slot diary entry
             case "Slot2":
-                playSound(collectSlotSoundEffect);
+               // playSound(collectSlotSoundEffect);
                 other.gameObject.SetActive(false);
                 img2.gameObject.SetActive(false);
                 SetSlot2Text();
@@ -106,7 +106,7 @@ public class PlayerController : MonoBehaviour {
             
             //if player collects third slot diary entry
             case "Slot3":
-                playSound(collectSlotSoundEffect);
+               // playSound(collectSlotSoundEffect);
                 other.gameObject.SetActive(false);
                 img3.gameObject.SetActive(false);
                 SetSlot3Text();
@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour {
 
             //if player collects forth slot diary entry
             case "Slot4":
-                playSound(collectSlotSoundEffect);
+                // playSound(collectSlotSoundEffect);
                 other.gameObject.SetActive(false);
                 img4.gameObject.SetActive(false);
                 SetSlot4Text();
