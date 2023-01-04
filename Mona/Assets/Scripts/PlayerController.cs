@@ -16,12 +16,14 @@ public class PlayerController : MonoBehaviour {
     public TextMeshProUGUI GemText, UpgradeText, MapUpgradeText;
     public GameObject InputSoFar;
     public GameObject Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Enter;
+    public GameObject ship;
     public TextMeshProUGUI Slot1Text, Slot2Text, Slot3Text, Slot4Text;
     public Image img1, img2, img3, img4;
 
     public GameObject MapButton;
     public bool waterMove = false;
     public bool mapOpen = false;
+    public bool playerHasMoved = false;
 
     [SerializeField] private AudioSource collectGemSoundEffect, collectUpgradeSoundEffect, collectSlotSoundEffect;
 
@@ -30,6 +32,10 @@ public class PlayerController : MonoBehaviour {
         waterMove = false;
         SetGemCountText();
         mapOpen = false;
+
+        if (PlayerPrefs.HasKey("speed")) {
+            speed = PlayerPrefs.GetInt("speed");
+        }   
     }
 
     void OnMove (InputValue value ) {
@@ -40,18 +46,28 @@ public class PlayerController : MonoBehaviour {
         Vector3 movement = new Vector3 ( moveValue .x , 0.0f , moveValue . y );
 
         if (movement.magnitude >= 0.1f){
-        //to get the player to turn to the direction that it is traveling
-        float targetAngle = Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
-        transform.rotation = Quaternion.Euler(0f,targetAngle,0f);
+            
+            if (!playerHasMoved) {
+                playerHasMoved = true;
+                // Debug.Log("player first moved");
+                deactiveSpaceship();
+            }
+            
+            //to get the player to turn to the direction that it is traveling
+            float targetAngle = Mathf.Atan2(movement.x, movement.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            transform.rotation = Quaternion.Euler(0f,targetAngle,0f);
 
-        //to get player to move in the direction that camera is pointing at
-        Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
+            //to get player to move in the direction that camera is pointing at
+            Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
 
-        GetComponent < Rigidbody >() . AddForce (moveDir.normalized * speed * Time .
-        fixedDeltaTime ) ;
+            GetComponent < Rigidbody >() . AddForce (moveDir.normalized * speed * Time .
+            fixedDeltaTime ) ;
         }
     }
 
+    void deactiveSpaceship() {
+        ship.SetActive(false);
+    }
 
     void OnTriggerEnter(Collider other){
 
