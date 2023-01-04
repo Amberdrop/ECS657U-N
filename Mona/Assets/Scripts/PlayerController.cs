@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour {
         waterMove = false;
         SetGemCountText();
         mapOpen = false;
+
+        if (PlayerPrefs.HasKey("speed")) {
+            speed = PlayerPrefs.GetInt("speed");
+        }   
     }
 
     void OnMove (InputValue value ) {
