@@ -35,7 +35,34 @@ public class PlayerController : MonoBehaviour {
 
         if (PlayerPrefs.HasKey("speed")) {
             speed = PlayerPrefs.GetInt("speed");
-        }   
+        }
+
+        if (PlayerPrefs.HasKey("diaries")) {
+            string diaryCheckpoint = PlayerPrefs.GetString("diaries");
+            string[] diaryArray =  diaryCheckpoint.Split(char.Parse(" "));
+            
+            if (diaryArray[0] == "1") {
+                Debug.Log("first diary found from past game session");
+                img1.gameObject.SetActive(false);
+                SetSlot1Text();
+            }
+            if (diaryArray[1] == "1") {
+                Debug.Log("second diary found from past game session");
+                img2.gameObject.SetActive(false);
+                SetSlot2Text();
+            }
+            if (diaryArray[2] == "1") {
+                Debug.Log("third diary found from past game session");
+                img3.gameObject.SetActive(false);
+                SetSlot3Text();
+            }
+            if (diaryArray[3] == "1") {
+                Debug.Log("fourth diary found from past game session");
+                img4.gameObject.SetActive(false);
+                SetSlot4Text();
+            }
+
+        }
     }
 
     void OnMove (InputValue value ) {
@@ -75,7 +102,7 @@ public class PlayerController : MonoBehaviour {
         {
             //if player collides with gem, increase gem count
             case "Gems":
-                other . gameObject . SetActive ( false ) ;
+                other.gameObject.SetActive ( false ) ;
                 GemCount += 1;
                 SetGemCountText();
                 playSound(collectGemSoundEffect);
@@ -110,6 +137,7 @@ public class PlayerController : MonoBehaviour {
                 other.gameObject.SetActive(false);
                 img1.gameObject.SetActive(false);
                 SetSlot1Text();
+                updateDiaryCheckpoint(1);
                 break;
             
             //if player collects second slot diary entry
@@ -118,6 +146,7 @@ public class PlayerController : MonoBehaviour {
                 other.gameObject.SetActive(false);
                 img2.gameObject.SetActive(false);
                 SetSlot2Text();
+                updateDiaryCheckpoint(2);
                 break;
             
             //if player collects third slot diary entry
@@ -126,6 +155,7 @@ public class PlayerController : MonoBehaviour {
                 other.gameObject.SetActive(false);
                 img3.gameObject.SetActive(false);
                 SetSlot3Text();
+                updateDiaryCheckpoint(3);
                 break;
 
             //if player collects forth slot diary entry
@@ -134,6 +164,7 @@ public class PlayerController : MonoBehaviour {
                 other.gameObject.SetActive(false);
                 img4.gameObject.SetActive(false);
                 SetSlot4Text();
+                updateDiaryCheckpoint(4);
                 break;
             
             //if player enters the trigger box for the keycode input
@@ -182,6 +213,25 @@ public class PlayerController : MonoBehaviour {
 
         }
 
+    }
+
+    private void updateDiaryCheckpoint(int diary) {
+
+        string s = "0 0 0 0";
+        if (PlayerPrefs.HasKey("diaries")) {
+            s = PlayerPrefs.GetString("diaries");
+        } 
+
+        // diary 1 -> update 0 index
+        // diary 2 -> update 2 index
+        // diary 3 -> update 4 index
+        // diary 4 -> update 6 index
+
+        int index = (diary - 1) * 2;
+        s = s.Remove(index,index+1);
+        s = s.Insert(index,"1");
+
+        PlayerPrefs.SetString("diaries", s);
     }
 
     private void playSound(AudioSource audioSource) {
