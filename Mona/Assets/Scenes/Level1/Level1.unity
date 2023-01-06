@@ -12464,6 +12464,7 @@ MonoBehaviour:
   img3: {fileID: 666477431}
   img4: {fileID: 666477430}
   MapButton: {fileID: 1973146947}
+  Doorway: {fileID: 347377516}
   waterMove: 0
   mapOpen: 0
   playerHasMoved: 0
@@ -20650,7 +20651,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0.11694562, b: 0.764151, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -21073,7 +21074,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858797943}
-  m_LocalRotation: {x: 0.106977664, y: -0.000000004276911, z: 4.6017462e-10, w: 0.99426144}
+  m_LocalRotation: {x: 0.106977664, y: 0.000000004276911, z: -4.6017462e-10, w: 0.99426144}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

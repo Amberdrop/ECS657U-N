@@ -88,11 +88,13 @@ public class CodeInput : MonoBehaviour
         {
             inputSF = "correct";
             Doorway.SetActive(false);
-
+            // resume
+            Time.timeScale = 1f;
         }
         else
         {
             inputSF = "";
+            // there should be a popup to tell the player that the code is wrong
         }
         updateText();
     }

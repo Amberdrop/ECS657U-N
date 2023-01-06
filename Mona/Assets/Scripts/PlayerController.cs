@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
     public Image img1, img2, img3, img4;
 
     public GameObject MapButton;
+    public GameObject Doorway;
     public bool waterMove = false;
     public bool mapOpen = false;
     public bool playerHasMoved = false;
@@ -170,6 +171,10 @@ public class PlayerController : MonoBehaviour {
             //if player enters the trigger box for the keycode input
             case "Password":
                 //InputSoFar.SetActive(true);
+                if (Doorway.activeSelf) {
+                    // pause the game only when the player is inputing the code
+                    PauseTime();
+                }
                 Button1.SetActive(true);
                 Button2.SetActive(true);
                 Button3.SetActive(true);
@@ -206,6 +211,7 @@ public class PlayerController : MonoBehaviour {
                 Button9.SetActive(false);
                 Enter.SetActive(false);
                 InputSoFar.SetActive(false);
+                ResumeTime();
                 break;
 
             default:
@@ -214,6 +220,14 @@ public class PlayerController : MonoBehaviour {
         }
 
     }
+
+    private void ResumeTime() {
+          Time.timeScale = 1f;
+     }
+
+    private void PauseTime() {
+          Time.timeScale = 0f;
+     }
 
     private void updateDiaryCheckpoint(int diary) {
 
