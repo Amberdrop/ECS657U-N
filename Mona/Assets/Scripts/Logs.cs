@@ -30,7 +30,7 @@
 //     "Log 4; 28/5/2043
 
 //     K is dead. The medical drone finally came out and told us. It won't say how, and it won't let the doctor, P, in to check the body. She was absolutely fine, and a broken leg is basically nothing to the meds even we have in the med kit.
-//     I don't trust the drones. I need to find out whats in the storage shed, what the drones are up to. I know the control center for them is in there. I foud the code - its 9427. That should let me in. Wish me luck.
+//     I don't trust the drones. I need to find out whats in the storage shed, what the drones are up to. I know the control center for them is in there. I found the code - its 9427. That should let me in. Wish me luck.
 
 //     If anyone finds these logs, it means I failed. Please - destroy the drones before they can do any more harm. 
 //     "
