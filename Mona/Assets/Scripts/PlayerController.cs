@@ -172,6 +172,11 @@ public class PlayerController : MonoBehaviour {
             case "Password":
                 //InputSoFar.SetActive(true);
                 
+                if (Doorway.activeSelf) {
+                    // pause the game only when the player is inputing the code
+                    PauseTime();
+                }
+                
                 Button1.SetActive(true);
                 Button2.SetActive(true);
                 Button3.SetActive(true);
