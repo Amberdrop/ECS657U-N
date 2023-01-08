@@ -5,13 +5,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CodeInput : MonoBehaviour
 {
     //takes player input from buttons and checks against answer
 
 
-    public Button Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Enter;
+    public Button Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Enter, Clear;
     public TextMeshProUGUI InputSoFar;
     public GameObject Doorway;
     public string inputSF;
@@ -28,6 +29,7 @@ public class CodeInput : MonoBehaviour
         Button8.onClick.AddListener(butt8);
         Button9.onClick.AddListener(butt9);
         Enter.onClick.AddListener(buttEnter);
+        Clear.onClick.AddListener(buttClear);
     }
 
     
@@ -86,16 +88,22 @@ public class CodeInput : MonoBehaviour
     {
         if (inputSF == "9427")
         {
-            inputSF = "correct";
+            inputSF = "Correct";
             Doorway.SetActive(false);
-            // resume
-            Time.timeScale = 1f;
+            SceneManager.LoadScene("Outro");
         }
         else
         {
-            inputSF = "";
+            inputSF = "Incorrect";
+            
             // there should be a popup to tell the player that the code is wrong
         }
+        updateText();
+    }
+
+    void buttClear()
+    {
+        inputSF = "";
         updateText();
     }
 

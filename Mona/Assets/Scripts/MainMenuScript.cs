@@ -13,6 +13,7 @@ public class MainMenuScript : MonoBehaviour
         SceneManager.LoadScene("Intro");
     }
 
+
     public void QuitGame () {
         Debug.Log("QUIT!");
         Application.Quit();

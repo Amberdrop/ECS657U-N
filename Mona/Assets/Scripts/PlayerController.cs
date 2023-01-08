@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
     
     public TextMeshProUGUI GemText, UpgradeText, MapUpgradeText;
     public GameObject InputSoFar;
-    public GameObject Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Enter;
+    public GameObject Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Enter, Clear;
     public GameObject ship;
     public TextMeshProUGUI Slot1Text, Slot2Text, Slot3Text, Slot4Text;
     public Image img1, img2, img3, img4;
@@ -183,6 +183,7 @@ public class PlayerController : MonoBehaviour {
                 Button9.SetActive(true);
                 Enter.SetActive(true);
                 InputSoFar.SetActive(true);
+                Clear.SetActive(true);
                 break;
 
             default:
@@ -207,6 +208,7 @@ public class PlayerController : MonoBehaviour {
                 Button8.SetActive(false);
                 Button9.SetActive(false);
                 Enter.SetActive(false);
+                Clear.SetActive(false);
                 InputSoFar.SetActive(false);
                 ResumeTime();
                 break;
