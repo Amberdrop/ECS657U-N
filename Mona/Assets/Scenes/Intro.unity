@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -317,9 +317,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_text
-      value: "A secret space alliance has confirmed that there are 3 quantum stones
-        that we need to turn back time and stop Elon Musk before he took over the
-        country. \n"
+      value: Now, it's your mission to find the scattered logs that the settlers
+        left to figure out what happened here...
       objectReference: {fileID: 0}
     - target: {fileID: 8619071519479605846, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_Pivot.x
@@ -436,8 +435,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_text
-      value: "In each level, you are sent to a different planet to retrieve one quantum
-        stone. You must avoid the evil robots Elon has sent to kill you. \n"
+      value: 'You''ll be able to find the secret code to destroy all drones if you
+        read the logs carefully... '
       objectReference: {fileID: 0}
     - target: {fileID: 8619071519479605846, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_Pivot.x
@@ -886,8 +885,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_text
-      value: "He first started with buying out large companies, but things soon spiraled
-        out of control when he bought the US government. \n"
+      value: The planet looks amazing like what you've heard... beautiful trees and
+        fresh breeze from the ocean...
       objectReference: {fileID: 0}
     - target: {fileID: 8619071519479605846, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_Pivot.x
@@ -1004,8 +1003,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_text
-      value: 'There are booster items you can collect on each island to help you
-        explore the island. Gems are useful too.  '
+      value: wish you good luck...
       objectReference: {fileID: 0}
     - target: {fileID: 8619071519479605846, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_Pivot.x
@@ -1246,8 +1244,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_text
-      value: "He has raised taxes so much that citizens can\u2019t afford rent or
-        food anymore. \n"
+      value: wait.. but what is that? DRONES attacking civilians ? How did this happen
+        in the first place?
       objectReference: {fileID: 0}
     - target: {fileID: 8619071519479605846, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_Pivot.x
@@ -1482,6 +1480,11 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 903313894}
     m_Modifications:
+    - target: {fileID: 8619071519479605845, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
+      propertyPath: m_text
+      value: You just arrvied at Planet AZ52 after sitting around on a cramped ship
+        for 3 years....
+      objectReference: {fileID: 0}
     - target: {fileID: 8619071519479605846, guid: 7b97cad1a5f1c49eba58b5d0a5460ce7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
