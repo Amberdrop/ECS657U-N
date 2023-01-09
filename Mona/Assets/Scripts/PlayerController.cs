@@ -252,6 +252,8 @@ public class PlayerController : MonoBehaviour {
         s = s.Remove(index,1);
         s = s.Insert(index,"1");
 
+        Debug.Log(s);
+
         PlayerPrefs.SetString("diaries", s);
     }
 
