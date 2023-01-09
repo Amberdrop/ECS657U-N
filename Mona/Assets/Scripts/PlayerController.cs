@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour {
         // SetGemCountText();
         mapOpen = false;
 
+        PlayerPrefs.DeleteKey("diaries");
         if (PlayerPrefs.HasKey("speed")) {
             speed = PlayerPrefs.GetInt("speed");
         }
