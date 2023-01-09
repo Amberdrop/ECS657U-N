@@ -12,9 +12,9 @@ public class CodeInput : MonoBehaviour
     //takes player input from buttons and checks against answer
 
 
-    public Button Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Enter, Clear;
+    public Button Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Enter, Clear, ExitButton;
     public TextMeshProUGUI InputSoFar;
-    public GameObject Doorway;
+    public GameObject Doorway, input;
     public string inputSF;
 
     void Start()
@@ -30,6 +30,7 @@ public class CodeInput : MonoBehaviour
         Button9.onClick.AddListener(butt9);
         Enter.onClick.AddListener(buttEnter);
         Clear.onClick.AddListener(buttClear);
+        ExitButton.onClick.AddListener(buttExit);
     }
 
     
@@ -95,8 +96,7 @@ public class CodeInput : MonoBehaviour
         else
         {
             inputSF = "Incorrect";
-            
-            // there should be a popup to tell the player that the code is wrong
+            // Time.timeScale = 1f;
         }
         updateText();
     }
@@ -105,6 +105,14 @@ public class CodeInput : MonoBehaviour
     {
         inputSF = "";
         updateText();
+    }
+
+    void buttExit()
+    {
+        input.SetActive(false);
+        inputSF = "";
+        updateText();
+        Time.timeScale = 1f;
     }
 
     void updateText()
