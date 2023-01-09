@@ -246,7 +246,7 @@ public class PlayerController : MonoBehaviour {
         // diary 4 -> update 6 index
 
         int index = (diary - 1) * 2;
-        s = s.Remove(index,index+1);
+        s = s.Remove(index,1);
         s = s.Insert(index,"1");
 
         PlayerPrefs.SetString("diaries", s);
