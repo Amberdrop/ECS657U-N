@@ -15,13 +15,13 @@ public class PlayerController : MonoBehaviour {
     
     public TextMeshProUGUI GemText, UpgradeText, MapUpgradeText;
     public GameObject InputSoFar;
-    public GameObject Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Enter, Clear;
+    public GameObject Button1, Button2, Button3, Button4, Button5, Button6, Button7, Button8, Button9, Enter, Clear, ExitButton;
     public GameObject ship;
     public TextMeshProUGUI Slot1Text, Slot2Text, Slot3Text, Slot4Text;
     public Image img1, img2, img3, img4;
 
     public GameObject MapButton;
-    public GameObject Doorway;
+    public GameObject Doorway, InputDoor;
     public bool waterMove = false;
     public bool mapOpen = false;
     public bool playerHasMoved = false;
@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour {
                     // pause the game only when the player is inputing the code
                     PauseTime();
                 }
-
+                InputDoor.SetActive(true);
                 Button1.SetActive(true);
                 Button2.SetActive(true);
                 Button3.SetActive(true);
@@ -187,6 +187,7 @@ public class PlayerController : MonoBehaviour {
                 Button8.SetActive(true);
                 Button9.SetActive(true);
                 Enter.SetActive(true);
+                ExitButton.SetActive(true);
                 InputSoFar.SetActive(true);
                 Clear.SetActive(true);
                 break;
@@ -214,6 +215,7 @@ public class PlayerController : MonoBehaviour {
                 Button9.SetActive(false);
                 Enter.SetActive(false);
                 Clear.SetActive(false);
+                ExitButton.SetActive(false);
                 InputSoFar.SetActive(false);
                 ResumeTime();
                 break;
