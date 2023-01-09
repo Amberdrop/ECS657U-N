@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour {
     void Start () {
         GemCount = 0;
         waterMove = false;
-        SetGemCountText();
+        // SetGemCountText();
         mapOpen = false;
 
         if (PlayerPrefs.HasKey("speed")) {
